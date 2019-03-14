@@ -1,5 +1,9 @@
 package projectDangMorelNadeau.view;
 
-public class MainLayoutController {
+import javafx.scene.Node;
+import projectDangMorelNadeau.service.StageService;
+import projectDangMorelNadeau.service.ViewService;
 
+public class MainLayoutController {
+	
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectDangMorelNadeau.view.ContactDetailsController">
+   <children>
+      <Pane prefHeight="116.0" prefWidth="600.0" stylesheets="@style.css">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="73.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../image/large.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="name" layoutX="132.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname Firstname" wrappingWidth="111.310546875" />
+            <Button layoutX="334.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleReturnButton" text="Return to the List" />
+         </children>
+      </Pane>
+      <HBox layoutX="10.0" layoutY="111.0" prefHeight="284.0" prefWidth="583.0">
+         <children>
+            <VBox accessibleText="id" prefHeight="104.0" prefWidth="107.0">
+               <children>
+                  <Pane prefHeight="21.0" prefWidth="107.0" />
+                  <Text fx:id="idPropriete" strokeType="OUTSIDE" strokeWidth="0.0" text="id" />
+                  <Text fx:id="nicknamePropriete" strokeType="OUTSIDE" strokeWidth="0.0" text="nickname" />
+                  <Text fx:id="phoneNumberPropriete" strokeType="OUTSIDE" strokeWidth="0.0" text="phone number" />
+                  <Text fx:id="adressPropriete" strokeType="OUTSIDE" strokeWidth="0.0" text="adress" />
+                  <Text fx:id="emailAdressPropriete" strokeType="OUTSIDE" strokeWidth="0.0" text="email adress" />
+                  <Text fx:id="birthdatePropriete" strokeType="OUTSIDE" strokeWidth="0.0" text="birthdate" />
+               </children>
+            </VBox>
+            <VBox accessibleText="id" prefHeight="104.0" prefWidth="107.0">
+               <children>
+                  <Pane prefHeight="19.0" prefWidth="107.0" />
+                  <Text fx:id="id" strokeType="OUTSIDE" strokeWidth="0.0" text="id" />
+                  <Text fx:id="nickname" strokeType="OUTSIDE" strokeWidth="0.0" text="nickname" />
+                  <Text fx:id="phoneNumber" strokeType="OUTSIDE" strokeWidth="0.0" text="phone number" />
+                  <Text fx:id="adress" strokeType="OUTSIDE" strokeWidth="0.0" text="adress" />
+                  <Text fx:id="emailAdress" strokeType="OUTSIDE" strokeWidth="0.0" text="email adress" />
+                  <Text fx:id="birthdate" strokeType="OUTSIDE" strokeWidth="0.0" text="birthdate" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

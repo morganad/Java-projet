@@ -21,16 +21,44 @@ BDAY:1997-12-01
 EMAIL:thaï-son.dang@isen.yncrea.fr
 END:VCARDBEGIN:VCARD
 VERSION:4.0
-N:;Enzo;;;
-FN:Enzo 
+N:Nadeau;Enzo;;;
+FN:Enzo Nadeau
 TEL;TYPE=home,voice;VALUE=uri:tel:
 BDAY:2008-04-03
 EMAIL:
 END:VCARDBEGIN:VCARD
 VERSION:4.0
-N:UPDATE;update;;;
-FN:update UPDATE
-TEL;TYPE=home,voice;VALUE=uri:tel:0111111111
+N:heguh;heguh;;;
+FN:heguh heguh
+TEL;TYPE=home,voice;VALUE=uri:tel:0666666666
+BDAY:2019-03-13
+EMAIL:test@gmail.com
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:hello;me;;;
+FN:me hello
+TEL;TYPE=home,voice;VALUE=uri:tel:0666666666
+BDAY:2019-03-13
+EMAIL:rue test
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:Polo;Vincent;;;
+FN:Vincent Polo
+TEL;TYPE=home,voice;VALUE=uri:tel:0000000000
 BDAY:2019-03-14
-EMAIL:update.test@com
+EMAIL:4 rue des près
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:name;name2;;;
+FN:name2 name
+TEL;TYPE=home,voice;VALUE=uri:tel:0000000000
+BDAY:2019-03-14
+EMAIL:adresse
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:nom;prenom;;;
+FN:prenom nom
+TEL;TYPE=home,voice;VALUE=uri:tel:0000000000
+BDAY:2019-03-14
+EMAIL:adresse
 END:VCARD
