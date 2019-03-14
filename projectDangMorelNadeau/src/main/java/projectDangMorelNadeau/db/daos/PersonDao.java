@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import projectDangMorelNadeau.db.daos.DataSourceFactory;
 import projectDangMorelNadeau.db.entities.Person;
 
 
@@ -43,32 +44,30 @@ public class PersonDao {
 	return listOfPersons; 
 	}
 	
-	
-	public Person add(Integer id, String lastname, String firstname, String nickname, String phoneNumber, String address, String emailAddress, LocalDate birthDate) {
-		try (Connection connection = DataSourceFactory.getDataSource().getConnection()) {
-			String sqlQuery = "insert into person(idperson, lastname, firstname, nickname, phone_number, address, email_address, birth_date) " + "VALUES (?,?,?,?,?,?,?,?)";
-			try (PreparedStatement statement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
-				statement.setInt(1, id);
-				statement.setString(2, lastname);
-				statement.setString(3, firstname);
-				statement.setString(4, nickname);
-				statement.setString(5, phoneNumber);
-				statement.setString(6, address);
-				statement.setString(7, emailAddress);
-				statement.setDate(8, Date.valueOf(birthDate));
-				statement.executeUpdate();
-				
-				ResultSet ids = statement.getGeneratedKeys();
-				if (ids.next()) {
-					return new Person(id, lastname, firstname, nickname, phoneNumber, address, emailAddress, birthDate);
+	public Person addPerson(String lastname, String firstname, String nickname, 
+			String phoneNumber, String address, String emailAddress, LocalDate birthDate) {
+			try (Connection connection = DataSourceFactory.getDataSource().getConnection()) {
+				String sqlQuery = "insert into person(lastname, firstname, nickname, phone_number, "
+						+ "address, email_address, birth_date) " + "VALUES (?,?,?,?,?,?,?)";
+				try (PreparedStatement statement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
+					statement.setString(1, lastname);
+					statement.setString(2, firstname);
+					statement.setString(3, nickname);
+					statement.setString(4, phoneNumber);
+					statement.setString(5, address);
+					statement.setString(6, emailAddress);
+					statement.setDate(7, Date.valueOf(birthDate));
+					statement.executeUpdate();
+					ResultSet ids = statement.getGeneratedKeys();
+					if (ids.next()) {
+						return new Person(ids.getInt(1), lastname, firstname, nickname, phoneNumber, address, emailAddress, birthDate);
+					}
 				}
+			}catch (SQLException e) {
+				e.printStackTrace();
 			}
-		}catch (SQLException e) {
-			
-			e.printStackTrace();
+			return null;
 		}
-		return null;
-	}
 	
 	public void delete(Integer PersonId) {
 		try (Connection connection = DataSourceFactory.getDataSource().getConnection()) {
@@ -80,5 +79,30 @@ public class PersonDao {
 			
 			e.printStackTrace();
 		}
+	}
+	
+	public Person updatePerson(Integer id, String lastname, String firstname, String nickname, String phoneNumber, String address, String emailAddress, LocalDate birthDate) {
+		try (Connection connection = DataSourceFactory.getDataSource().getConnection()) {
+			String sqlQuery = "update person set lastname=?, firstname=?, nickname=?, phone_number=?, address=?, email_address=?, birth_date=? where idperson=?";
+			try (PreparedStatement statement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
+				statement.setString(1, lastname);
+				statement.setString(2, firstname);
+				statement.setString(3, nickname);
+				statement.setString(4, phoneNumber);
+				statement.setString(5, address);
+				statement.setString(6, emailAddress);
+				statement.setDate(7, Date.valueOf(birthDate));
+				statement.setInt(8, id);
+				statement.executeUpdate();
+				ResultSet ids = statement.getGeneratedKeys();
+				if (ids.next()) {
+					return new Person(ids.getInt(1), lastname, firstname, nickname, phoneNumber, address, emailAddress, birthDate);
+				}
+			}
+		}catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

@@ -32,9 +32,13 @@ public class Application {
 		
 		LocalDate dateAdd = LocalDate.now();
 		
-		//personDao.add(14, "TestAdd", "TestAdd", "Test", "0666666666", "rue test", "test@gmail.com", dateAdd);
+		//personDao.addPerson("TestAddwithoutint", "TestAdd", "Test", "0666666666", "rue test", "test@gmail.com", dateAdd);
 		
-		personDao.delete(66);
+		//personDao.deletePerson(44);
+		
+		personDao.updatePerson(68, "UPDATE", "update", "update", "0111111111", "rue update", "update.test@com", dateAdd);
+		
+	
 		
 	
 	}
