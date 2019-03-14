@@ -1,10 +1,14 @@
 package projectDangMorelNadeau.db.daos;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
 import projectDangMorelNadeau.db.daos.PersonDao;
 import projectDangMorelNadeau.db.entities.Person;
+import projectDangMorelNadeau.view.ContactOverviewController;
+import projectDangMorelNadeau.test.database;
 
 public class Application {
 	
@@ -36,10 +40,8 @@ public class Application {
 		
 		//personDao.deletePerson(44);
 		
-		personDao.updatePerson(68, "UPDATE", "update", "update", "0111111111", "rue update", "update.test@com", dateAdd);
+		//personDao.updatePerson(14, "UPDATE", "update", "update", "0111111111", "rue update", "update.test@com", dateAdd);
 		
-	
-		
-	
+		PersonDaoTest
 	}
 }

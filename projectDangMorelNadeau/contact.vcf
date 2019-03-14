@@ -1,0 +1,36 @@
+BEGIN:VCARD
+VERSION:4.0
+N:Morel;Vincent;;;
+FN:Vincent Morel
+TEL;TYPE=home,voice;VALUE=uri:tel:0712131415
+BDAY:2019-02-21
+EMAIL:vincent.morel@isen.yncrea.fr
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:Nadeau;Morgane;;;
+FN:Morgane Nadeau
+TEL;TYPE=home,voice;VALUE=uri:tel:0618746547
+BDAY:1997-06-12
+EMAIL:morgane.nadeau@isen.yncrea.fr
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:Dang;Thaï-son;;;
+FN:Thaï-son Dang
+TEL;TYPE=home,voice;VALUE=uri:tel:0638475867
+BDAY:1997-12-01
+EMAIL:thaï-son.dang@isen.yncrea.fr
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:;Enzo;;;
+FN:Enzo 
+TEL;TYPE=home,voice;VALUE=uri:tel:
+BDAY:2008-04-03
+EMAIL:
+END:VCARDBEGIN:VCARD
+VERSION:4.0
+N:UPDATE;update;;;
+FN:update UPDATE
+TEL;TYPE=home,voice;VALUE=uri:tel:0111111111
+BDAY:2019-03-14
+EMAIL:update.test@com
+END:VCARD
