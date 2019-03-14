@@ -14,7 +14,7 @@ public class DataSourceFactory {
 			dataSource = new MysqlDataSource();
 			dataSource.setServerName("localhost");
 			dataSource.setPort(3306);
-			dataSource.setDatabaseName("Java2Project");
+			dataSource.setDatabaseName("java");
 			dataSource.setUser("root");
 			dataSource.setPassword("");
 		}
